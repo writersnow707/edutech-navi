@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from 'react'
-import './Navbar.css'
-import logo from '../../assets/navi_tool-kit.png'
+import React, { useEffect, useState } from "react";
+import "./Navbar.css";
+import logo from "../../assets/navi_tool-kit.png";
 import menu_icon from "../../assets/menu-icon.png";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
-    window.addEventListener('scroll', ()=>{
+    window.addEventListener("scroll", () => {
       window.scrollY > 50 ? setSticky(true) : setSticky(false);
-    })
+    });
   }, []);
-  
+
   const [mobileMenu, setMobileMenu] = useState(false);
   const toggleMenu = () => {
     mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
-  }
+  };
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
       <img src={logo} alt="" className="logo" />
-      <ul className={mobileMenu?'':'hide-mobile-menu'}>
+      <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <Link to="hero" smooth={true} offset={0} duration={500}>
             Home
@@ -28,35 +28,35 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="program" smooth={true} offset={-260} duration={500}>
-            Program
+            나비툴킷 소개
           </Link>
         </li>
         <li>
           <Link to="about" smooth={true} offset={-150} duration={500}>
-            에듀테크 소개
+            에듀테크란?
           </Link>
         </li>
         <li>
-          <Link to="campus" smooth={true} offset={-260} duration={500}>
-            Campus
+          <Link to="gallery" smooth={true} offset={-260} duration={500}>
+            갤러리
           </Link>
         </li>
         <li>
-          <Link to="testimonials" smooth={true} offset={-260} duration={500}>
-            선생님들
+          <Link to="teacher" smooth={true} offset={-260} duration={500}>
+            도우미
           </Link>
         </li>
         <li>
           <button className="btn">
             <Link to="contact" smooth={true} offset={-260} duration={500}>
-              Contact us
+              문의하기
             </Link>
           </button>
         </li>
       </ul>
-      <img src={menu_icon} alt="" className='menu-icon' onClick={toggleMenu} />
+      <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} />
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

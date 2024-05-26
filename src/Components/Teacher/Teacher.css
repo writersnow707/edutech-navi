@@ -1,4 +1,4 @@
-.testimonials{
+.teacher{
     margin: 80px auto;
     padding: 0 80px;
     position: relative;
@@ -58,14 +58,14 @@
 }
 
 @media (max-width: 800px){
-    .testimonials{
+    .teacher{
         padding: 0 40px;
     }
     .next-btn, .back-btn{
         padding: 10px;
         width: 35px;
     }
-    .testimonials ul li{
+    .teacher ul li{
         padding: 10px;
     }
     .slide{

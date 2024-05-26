@@ -38,7 +38,7 @@ const Contact = () => {
         <h3>
           연락처<img src={msg_icon} alt="" />
         </h3>
-        <p>준비 중입니다.</p>
+        {/* <p>준비 중입니다.</p> */}
         <ul>
           <li>
             <img src={mail_icon} alt="" />

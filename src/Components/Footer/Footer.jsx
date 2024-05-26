@@ -1,16 +1,16 @@
-import React from 'react'
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <div className="footer">
       <p>ⓒ 2024 NAVI. All rights reserved</p>
-      <ul>
+      {/*<ul>
         <li>Terms of Services</li>
         <li>Privacy Policy</li>
-      </ul>
+      </ul>*/}
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;
